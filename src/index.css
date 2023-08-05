@@ -2,6 +2,39 @@
     font-family: 'Sherk';
     src: url('./fonts/SHREK___.TTF') format('opentype');
   }
+  /* Root CSS con la paleta de colores inspirada en Shrek */
+
+:root {
+    /* Colores */
+    --swamp-green: #7BB661;
+    --ogre-green: #9DC183;
+    --donkey-brown: #805A3B;
+    --fiona-purple: #A25FAE;
+    --far-far-away-sky-blue: #7FB2D9;
+  
+    /* Otros estilos */
+    --border-radius: 8px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Agrega más variables según tus necesidades */
+  }
+  
+  /* Ejemplo de uso de la paleta de colores en un botón */
+  .button {
+    background-color: var(--swamp-green);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+  }
+  
+  /* Ejemplo de uso de la paleta de colores en un título */
+  h1 {
+    color: var(--ogre-green);
+  }
+  
+
 body{
     /* background-image: url('https://e0.pxfuel.com/wallpapers/505/711/desktop-wallpaper-shrek-s-swamp.jpg'); */
     background-image: url('./img/descarga.jfif');
@@ -12,30 +45,77 @@ body{
     padding: 0;
   
 }
+.icon-green {
+    font-size: 24px;
+    color: green;
+    /* Otros estilos adicionales */
+  }
+  
 .header-welcome{
     display: grid;
     place-items: center;
     color: aliceblue;
 }
-.container-welcome{
+
+.container-welcome {
     position: absolute;
     top: 50%;
-    width: 360px;
-    height: 260px;
+    width: 340px;
+    height: 240px;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 24px;
     box-shadow: 2px 2px 20px #232A35;
-}
-.welcome{
+  }
+  
+  .welcome {
     background-color: #ffffff75;
-    width: 360px;
+    width: 100%;
     border-radius: 24px;
-    height: 260px;
+    height: 100%;
     display: flex;
-    align-items: center;
-    flex-direction: column;
-}
+    justify-content: center;
+    align-items: center; /* Alineamos los elementos al inicio */
+    flex-direction: column; /* Ajustamos la dirección a columna */
+    padding: 20px; /* Espaciado interno */
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: flex-start; /* Alineamos el label y el input al inicio */
+    flex-direction: column; /* Ajustamos la dirección a columna */
+  }
+  
+  label {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid var(--donkey-brown);
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 2rem;
+  }
+  
+  button {
+    background-color: var(--far-far-away-sky-blue);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--ogre-green);
+  }
 h1{
     font-family: 'Sherk';
     text-transform: uppercase;
