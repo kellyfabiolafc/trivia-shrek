@@ -2,74 +2,23 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>trivia</title>
-    <link rel="stylesheet" href="index.css"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ogrequest</title>
+    <link rel="stylesheet" href="/src/index.css">
 </head>
 
 <body>
-    <main>
-        <form id="form-cuestions">
-            <p class="p1">Es el personaje principal de la película, un ogro verde y malhumorado que vive en un pantano.</p>
-                     <input type="radio" value="2" name="p1"  />
-                        <label>2</label>
-                     <input type="radio" value="10"  name="p1"   class="correctap1" />
-                        <label>10</label>
-                     <input type="radio" value="3" name="p1"/>
-                        <label>3</label>
-                     <input type="radio" value="1"  name="p1"/>
-                        <label>1</label>
-             <p class="p2">Es la princesa que se transforma en un ogro al caer la noche y es el interés amoroso de Shrek</p>
-                     <input type="radio" value="2" name="p2"/>
-                        <label>2</label>
-                     <input type="radio" class="correctap2" value="0" name="p2"/>
-                        <label>0</label>
-                     <input type="radio" value="3" name="p2"/>
-                       <label>3</label>
-                     <input type="radio" value="1" name="p2"/>
-                      <label>1</label>
-             <p class="p3">Es el fiel compañero de Shrek, un burro parlante que siempre está listo para la aventura</p>
-                     <input type="radio" value="2" name="p3"/>
-                      <label>2</label>
-                    <input type="radio" class="correctap3" value="8"  name="p3"/>
-                      <label>8</label>
-                    <input type="radio" value="3" name="p3"/>
-                      <label>3</label>
-                   <input type="radio" value="1"name="p3" />
-                      <label>1</label>
-            <p class="p4">Es el antagonista principal de la película, un pequeño y manipulador lord que quiere casarse con Fiona.</p>
-                    <input type="radio" value="2" name="p4"/>
-                       <label>2</label>
-                    <input type="radio" class="correctap4"  value="18" name="p4"/>
-                       <label>18</label>
-                   <input type="radio" value="3" name="p4"/>
-                       <label>3</label>
-                    <input type="radio" value="1" name="p4"/>
-                      <label>1</label>
-             <p class="p5">Es el temido dragón que custodia la torre donde Fiona está encerrada."</p>
-                   <input type="radio" value="2" name="p5" />
-                        <label>2</label>
-                   <input type="radio" class="correctap5" value="6" name="p5"/>
-                        <label>6</label>
-                   <input type="radio" value="3" name="p5"/>
-                        <label>3</label> 
-                   <input type="radio" value="1" name="p5"/>
-                       <label>1</label>
-                    <button>Enviar</button>
-                    <p id="resultCorrects"></p>
-                    <p id="totalCorrects"></p>
-                    <p id="resultIncorrects"></p>
-                    
-        </form>
-<!-- 
-        <form oninput="resultado.value=parseInt(a.value)+parseInt(b.value)">
-            <input type="number" name="b" /> +
-            <input type="number" name="a" /> =
-            <output name="resultado"></output>
-          </form> -->
+    <header class="header-welcome">
+        <h1>Sherk OgreQuest</h1>
+    </header>
+    <main class="container-welcome">
+        <section class="welcome">
+            <label>Agrega tu nombre</label>
+            <input type="text" required>
+            <a><button>Jugar</button></a>
+        </section>
     </main>
-    <script src="./index.js"></script>
 </body>
 
 </html>

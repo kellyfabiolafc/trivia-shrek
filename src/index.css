@@ -1,6 +1,43 @@
+@font-face {
+    font-family: 'Sherk';
+    src: url('./fonts/SHREK___.TTF') format('opentype');
+  }
 body{
-    background-image: url('https://images5.alphacoders.com/129/1297238.png');
+    /* background-image: url('https://e0.pxfuel.com/wallpapers/505/711/desktop-wallpaper-shrek-s-swamp.jpg'); */
+    background-image: url('./img/descarga.jfif');
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+  
+}
+.header-welcome{
+    display: grid;
+    place-items: center;
+    color: aliceblue;
+}
+.container-welcome{
+    position: absolute;
+    top: 50%;
+    width: 360px;
+    height: 260px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 24px;
+    box-shadow: 2px 2px 20px #232A35;
+}
+.welcome{
+    background-color: #ffffff75;
+    width: 360px;
+    border-radius: 24px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    font-family: 'Sherk';
+    text-transform: uppercase;
+    letter-spacing: 1rem;
 }
