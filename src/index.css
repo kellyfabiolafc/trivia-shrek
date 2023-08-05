@@ -45,6 +45,12 @@ body{
     padding: 0;
   
 }
+.icon-green {
+    font-size: 24px;
+    color: green;
+    /* Otros estilos adicionales */
+  }
+  
 .header-welcome{
     display: grid;
     place-items: center;
