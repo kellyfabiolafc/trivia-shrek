@@ -26,39 +26,38 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const correctAnswers = [
-  "correctap1",
-  "correctap2",
-  "correctap3",
-  "correctap4",
-  "correctap5",
+  "Shrek",
+  "Burro",
+  "Fiona",
+  "Donkey",
+  "Humanos",
 ];
 let counter = 0;
 
-document.getElementById("form-questions").addEventListener("submit", (e) => {
-  e.preventDefault();
-  // Reiniciar el contador a cero en cada envío del formulario
+
+document.getElementById('enviar').addEventListener('click',()=>{
   counter = 0;
-  correctAnswers.forEach((question) => {
-    const inputs = document.querySelector(`input[class="${question}"]`);
+  correctAnswers.map((question) => {
+    const inputs = document.querySelector(`input[value="${question}"]`);
     if (inputs && inputs.checked) {
       counter++;
     }
+  })
+  document.querySelector(
+    "#totalCorrects"
+  ).textContent = `total de preguntas  ${correctAnswers.length}`;
+  document.querySelector(
+    "#resultCorrects"
+  ).textContent = `cantidad  de respuestas correctas ${counter}`;
+  document.querySelector(
+    "#resultIncorrects"
+  ).textContent = `cantidad  de respuestas incorrectas ${
+    correctAnswers.length - counter
+  }`;
+  document.getElementById("form-questions").reset();
+})
 
-    document.querySelector(
-      "#totalCorrects"
-    ).textContent = `total de preguntas  ${correctAnswers.length}`;
-    document.querySelector(
-      "#resultCorrects"
-    ).textContent = `cantidad  de respuestas correctas ${counter}`;
-    document.querySelector(
-      "#resultIncorrects"
-    ).textContent = `cantidad  de respuestas incorrectas ${
-      correctAnswers.length - counter
-    }`;
 
-    document.getElementById("form-questions").reset();
-  });
-});
 // Función para obtener un saludo aleatorio y divertido
 function obtenerSaludoRandom() {
   const greetings = [
@@ -76,3 +75,33 @@ function obtenerSaludoRandom() {
   // Devolver el saludo aleatorio
   return greetings[randomIndex];
 }
+
+
+//Codigo funcional sin el modal 
+
+// document.getElementById("form-questions").addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   // Reiniciar el contador a cero en cada envío del formulario
+//   counter = 0;
+//   correctAnswers.map((question) => {
+//     const inputs = document.querySelector(`input[value="${question}"]`);
+//     if (inputs && inputs.checked) {
+//       counter++;
+//     }
+
+
+//   });
+//   document.querySelector(
+//     "#totalCorrects"
+//   ).textContent = `total de preguntas  ${correctAnswers.length}`;
+//   document.querySelector(
+//     "#resultCorrects"
+//   ).textContent = `cantidad  de respuestas correctas ${counter}`;
+//   document.querySelector(
+//     "#resultIncorrects"
+//   ).textContent = `cantidad  de respuestas incorrectas ${
+//     correctAnswers.length - counter
+//   }`;
+
+//   document.getElementById("form-questions").reset();
+// });
