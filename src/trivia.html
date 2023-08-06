@@ -6,78 +6,194 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <title>trivia</title>
    <link rel="stylesheet" href="trivia.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM Sans|Abel|Poppins|" />
+   <!-- Agregar Bootstrap CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 
-<body>
-   <main>
-      <h1 id="welcomed"> </h1>
-      <form id="form-cuestions">
-         <section class="container-p1">
-            <p class="p1">Es el personaje principal de la película, un ogro verde y malhumorado que vive en un pantano.
-            </p>
-            <input type="radio" value="2" name="p1" />
-            <label>2</label>
-            <input type="radio" value="10" name="p1" class="correctap1" />
-            <label>10</label>
-            <input type="radio" value="3" name="p1" />
-            <label>3</label>
-            <input type="radio" value="1" name="p1" />
-            <label>1</label>
-         </section>
-         <section class="container-p2">
-            <p class="p2">Es la princesa que se transforma en un ogro al caer la noche y es el interés amoroso de Shrek
-            </p>
-            <input type="radio" value="2" name="p2" />
-            <label>2</label>
-            <input type="radio" class="correctap2" value="0" name="p2" />
-            <label>0</label>
-            <input type="radio" value="3" name="p2" />
-            <label>3</label>
-            <input type="radio" value="1" name="p2" />
-            <label>1</label>
-         </section>
-         <section class="container-p3">
-            <p class="p3">Es el fiel compañero de Shrek, un burro parlante que siempre está listo para la aventura</p>
-            <input type="radio" value="2" name="p3" />
-            <label>2</label>
-            <input type="radio" class="correctap3" value="8" name="p3" />
-            <label>8</label>
-            <input type="radio" value="3" name="p3" />
-            <label>3</label>
-            <input type="radio" value="1" name="p3" />
-            <label>1</label>
-         </section>
-         <section class="container-p4">
-            <p class="p4">Es el antagonista principal de la película, un pequeño y manipulador lord que quiere casarse
-               con Fiona.</p>
-            <input type="radio" value="2" name="p4" />
-            <label>2</label>
-            <input type="radio" class="correctap4" value="18" name="p4" />
-            <label>18</label>
-            <input type="radio" value="3" name="p4" />
-            <label>3</label>
-            <input type="radio" value="1" name="p4" />
-            <label>1</label>
-         </section>
-         <section class="container-p5">
-            <p class="p5">Es el temido dragón que custodia la torre donde Fiona está encerrada."</p>
-            <input type="radio" value="2" name="p5" />
-            <label>2</label>
-            <input type="radio" class="correctap5" value="6" name="p5" />
-            <label>6</label>
-            <input type="radio" value="3" name="p5" />
-            <label>3</label>
-            <input type="radio" value="1" name="p5" />
-            <label>1</label>
-         </section>
-         <button>Enviar</button>
-         <p id="resultCorrects"></p>
-         <p id="totalCorrects"></p>
-         <p id="resultIncorrects"></p>
+<body style="background-color:  #7BB661;">
 
-      </form>
+   <main class="container-questions">
+      <article class="container-form">
+         <header>
+            <h1 id="welcome-ogre" class="welcome-ogre"> </h1>
+         </header>
+         <form id="form-questions">
+            <div class="questions-father">
+               <section class="container-p1">
+                  <picture class="container-answer">
+                     <img src='./img/shrek.jpg'>
+                  </picture>
+                  <div class="container-answer">
+                     <p class="p1">¿Cuál es el nombre del protagonista verde de la película?
+                     </p>
+                     <div class="divisor">
+                        <div class="input-group">
+                           <input type="radio" value="Shrek" name="p1" class="correctap1" /><label>a) Shrek </label>
+                        </div>
+                        <div class="input-group"> <input type="radio" value="10" name="p1" />
+                           <label>b) Donkey</label>
+                        </div>
+                        <div class="input-group"> <input type="radio" value="3" name="p1" />
+                           <label>c) Fiona </label>
+                        </div>
+                        <div class="input-group"> <input type="radio" value="1" name="p1" />
+                           <label>d) Lord Farquaad</label>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="container-p2">
+                  <picture class="container-answer">
+                     <img src='./img/burro.jfif'>
+                  </picture>
+                  <div class="container-answer">
+                     <p class="p2">¿Qué animal es el mejor amigo de Shrek?
+                     </p>
+                     <div class="divisor">
+                        <div class="input-group">
+                           <input type="radio" value="2" name="p2" />
+                           <label>a) Perro</label>
+                        </div>
+                        <div class="input-group">
+                           <input type="radio" value="0" name="p2" />
+                           <label>b) Gato</label>
+                        </div>
+                        <div class="input-group">
+                           <input type="radio" value="Burro" name="p2" class="correctap2" />
+                           <label>c) Burro</label>
+                        </div>
+                        <div class="input-group"> <input type="radio" value="1" name="p2" />
+                           <label>d) Caballo</label>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="container-p3">
+                  <picture class="container-answer">
+                     <img src='./img/fiona.jfif'>
+                  </picture>
+                  <div class="container-answer">
+                     <p class="p3">¿Cómo se llama la princesa que Shrek debe rescatar?
+                     </p>
+                     <div class="divisor">
+                        <div class="input-group">
+                           <input type="radio" value="2" name="p3" />
+                           <label>a) Bella</label>
+                        </div>
+                        <div class="input-group">
+                           <input type="radio" value="8" name="p3" />
+                           <label>b) Cenicienta</label>
+                        </div>
+                        <div class="input-group">
+                           <input type="radio" value="3" name="p3" />
+                           <label>c) Rapunzel</label>
+                        </div>
+                        <div class="input-group">
+                           <input type="radio" value="Fiona" name="p3" class="correctap3" />
+                           <label>d) Fiona</label>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="container-p4">
+                  <picture class="container-answer">
+                     <img src='./img/que-espejo.jpg'>
+                  </picture>
+                  <div class="container-answer">
+                     <p class="p4">¿Cuál es el nombre del burro parlante en la película? </p>
+                     <div class="divisor">
+                        <div class="input-group">
+                           <input type="radio" value="2" name="p4" />
+                           <label>a) Poncho</label>
+                        </div>
+                        <div class="input-group">
+                           <input type="radio" value="Donkey" name="p4" class="correctap4" />
+                           <label>b) Donkey</label>
+                        </div>
+                        <div class="input-group">
+                           <input type="radio" value="3" name="p4" />
+                           <label>c) Puss in Boots (Gato con Botas)</label>
+                        </div>
+                        <div class="input-group">
+                           <input type="radio" value="1" name="p4" />
+                           <label>d) Sombra</label>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="container-p5">
+                  <picture class="container-answer">
+                     <img src='./img/pantano.jpg'>
+                  </picture>
+                  <div class="container-answer">
+                     <p class="p5">¿Qué tipo de criatura gobierna el reino donde vive Shrek?</p>
+                     <div class="divisor">
+                        <div class="input-group">
+                           <input type="radio" value="2" name="p5" />
+                           <label> a) Dragones </label>
+                        </div>
+                        <div class="input-group">
+                           <input type="radio" class="correctap5" value="Humanos" name="p5" />
+                           <label>b) Humanos </label>
+                        </div>
+                        <div class="input-group">
+                           <input type="radio" value="3" name="p5" />
+                           <label>c) Ogros</label>
+                        </div>
+                        <div class="input-group">
+                           <input type="radio" value="1" name="p5" />
+                           <label>d) Duendes</label>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+            <div class="container-btn">
+               <button id="enviar" type="button" data-bs-toggle="modal"
+                 class="btn-custom " data-bs-target="#miModal">Enviar</button>
+            </div>
+         </form>
+      </article>
    </main>
-   <script src="./trivia.js"></script>
+
+   <!-- Modal -->
+   <!-- Modal -->
+   <div class="modal fade" id="miModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="miModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h1 class="modal-title fs-5" id="miModalLabel">Resultados de la Trivia de Shrek</h1>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+               <p id="totalCorrects"></p>
+               <p id="resultCorrects"></p>
+               <p id="resultIncorrects"></p>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn-custom" data-bs-dismiss="modal">Cerrar</button>
+               <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+
+
+   <script src="trivia.js"></script>
+   <!-- jQuery -->
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+   <!-- Popper.js -->
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+
+   <!-- Bootstrap -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

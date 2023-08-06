@@ -12,17 +12,3 @@
     /* Agrega más variables según tus necesidades */
   }
   
-  button {
-    background-color: var(--far-far-away-sky-blue);
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: var(--ogre-green);
-  }
