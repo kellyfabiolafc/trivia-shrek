@@ -1,4 +1,15 @@
-// Función para la página de trivia
+
+// TODO: Función para la página de trivia
+let counter = 0;
+
+const correctAnswers = [
+  "Shrek",
+  "Burro",
+  "Fiona",
+  "Donkey",
+  "Humanos",
+];
+
 function handleTriviaPage() {
   // Obtener el mensaje de bienvenida y mostrar el valor del input almacenado
   const message = document.getElementById("welcome-ogre");
@@ -17,24 +28,7 @@ function handleTriviaPage() {
     message.textContent = ""; // Limpiar el contenido del mensaje
   }, 10000); // 10000 milisegundos = 10 segundos
 
-  // Aquí puedes agregar el código específico para la página de trivia
-}
-
-// Verificar en qué página estamos y ejecutar el código correspondiente
-document.addEventListener("DOMContentLoaded", function () {
-  handleTriviaPage();
-});
-
-const correctAnswers = [
-  "Shrek",
-  "Burro",
-  "Fiona",
-  "Donkey",
-  "Humanos",
-];
-let counter = 0;
-
-
+  
 document.getElementById('enviar').addEventListener('click',()=>{
   counter = 0;
   correctAnswers.map((question) => {
@@ -42,20 +36,27 @@ document.getElementById('enviar').addEventListener('click',()=>{
     if (inputs && inputs.checked) {
       counter++;
     }
-  })
-  document.querySelector(
-    "#totalCorrects"
-  ).textContent = `total de preguntas  ${correctAnswers.length}`;
-  document.querySelector(
-    "#resultCorrects"
-  ).textContent = `cantidad  de respuestas correctas ${counter}`;
-  document.querySelector(
-    "#resultIncorrects"
-  ).textContent = `cantidad  de respuestas incorrectas ${
-    correctAnswers.length - counter
-  }`;
+  });
+
+  document.querySelector("#totalCorrects").textContent = `Total de preguntas : ${correctAnswers.length}`;
+  document.querySelector( "#resultCorrects").textContent = `Cantidad  de respuestas correctas : ${counter}`;
+  document.querySelector("#resultIncorrects").textContent = `Cantidad  de respuestas incorrectas : ${ correctAnswers.length - counter}`;
   document.getElementById("form-questions").reset();
-})
+
+});
+
+}
+
+// Verificamosen qué página estamos y ejecutar el código correspondiente
+document.addEventListener("DOMContentLoaded", function () {
+  handleTriviaPage();
+});
+
+
+
+
+
+
 
 
 // Función para obtener un saludo aleatorio y divertido
