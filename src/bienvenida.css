@@ -3,21 +3,7 @@
     src: url('./fonts/SHREK___.TTF') format('opentype');
   }
   /* Root CSS con la paleta de colores inspirada en Shrek */
-
-:root {
-    /* Colores */
-    --swamp-green: #7BB661;
-    --ogre-green: #9DC183;
-    --donkey-brown: #805A3B;
-    --fiona-purple: #A25FAE;
-    --far-far-away-sky-blue: #7FB2D9;
-  
-    /* Otros estilos */
-    --border-radius: 8px;
-    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    /* Agrega más variables según tus necesidades */
-  }
-  
+@import './global.css';
   /* Ejemplo de uso de la paleta de colores en un botón */
   .button {
     background-color: var(--swamp-green);
@@ -102,20 +88,6 @@ body{
     margin-bottom: 2rem;
   }
   
-  button {
-    background-color: var(--far-far-away-sky-blue);
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: var(--ogre-green);
-  }
 h1{
     font-family: 'Sherk';
     text-transform: uppercase;
