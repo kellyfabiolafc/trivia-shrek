@@ -2,3 +2,67 @@
 body{
     background-color: var( --swamp-green);
 }
+.welcome-ogre{
+color: var(--fiona-purple);
+}
+.container-questions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+.container-form{
+    max-width: 700px;
+    background-color: var(--fiona-purple);
+}
+.questions-father{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(1,1fr);
+    margin-bottom: 1rem;
+    padding: 20px;
+}
+section{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--far-far-away-sky-blue);
+    border-radius: 20px;
+    padding: 20px
+}
+
+p{
+    padding: 0;
+    margin:0 ;
+}
+
+.container-answer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+
+}
+
+.divisor{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    
+    width: 100%;
+}
+.container-answer .input-group {
+    display: flex;
+    align-items: center;
+}
+.container-answer input[type="radio"] {
+    margin-right: 5px;
+}
+
+
+img{
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    object-fit: cover;
+}
