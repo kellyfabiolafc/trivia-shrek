@@ -1,9 +1,14 @@
+@import './global.css';
 @font-face {
     font-family: 'Sherk';
     src: url('./fonts/SHREK___.TTF') format('opentype');
   }
+  @font-face {
+    font-family: 'Japan';
+    src: url('./fonts/Vlump.ttf') format('opentype');
+  }
   /* Root CSS con la paleta de colores inspirada en Shrek */
-@import './global.css';
+
   /* Ejemplo de uso de la paleta de colores en un botón */
   .button {
     background-color: var(--swamp-green);
@@ -18,8 +23,20 @@
   /* Ejemplo de uso de la paleta de colores en un título */
   h1 {
     color: var(--ogre-green);
+    position: absolute;
+    font-family: 'Old London';
+    font-size: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 250px;
+    text-align: center;
   }
-  
+  .ear{
+    font-family: 'Sherk';
+    letter-spacing: 10px;
+    text-align: center;
+    font-size: 60px;
+  }
 
 body{
     /* background-image: url('https://e0.pxfuel.com/wallpapers/505/711/desktop-wallpaper-shrek-s-swamp.jpg'); */
@@ -51,10 +68,11 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 24px;
-    box-shadow: 2px 2px 20px #232A35;
+
   }
   
   .welcome {
+    box-shadow: 2px 2px 20px #232A35;
     background-color: #ffffff75;
     width: 100%;
     border-radius: 24px;
@@ -87,13 +105,8 @@ body{
     outline: none;
     margin-bottom: 2rem;
   }
-  
-h1{
-    font-family: 'Sherk';
-    text-transform: uppercase;
-    letter-spacing: 1rem;
-}
-button {
+
+.btn-custom {
   background-color: var(--fiona-purple);
   color: white;
   border: none;
@@ -104,6 +117,6 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color:#C37ED0 ;
+.btn-custom:hover {
+  background-color: #C37ED0;
 }
