@@ -15,7 +15,7 @@ function handleTriviaPage() {
   // Temporizador para eliminar el mensaje después de 10 segundos
   setTimeout(() => {
     message.textContent = ""; // Limpiar el contenido del mensaje
-  }, 60000); // 10000 milisegundos = 10 segundos
+  }, 10000); // 10000 milisegundos = 10 segundos
 
   // Aquí puedes agregar el código específico para la página de trivia
 }
@@ -38,19 +38,18 @@ document.getElementById("form-questions").addEventListener("submit", (e) => {
   e.preventDefault();
   // Reiniciar el contador a cero en cada envío del formulario
   counter = 0;
-  correctAnswers.map((question) => {
+  correctAnswers.forEach((question) => {
     const inputs = document.querySelector(`input[class="${question}"]`);
     if (inputs && inputs.checked) {
       counter++;
     }
 
-   
     document.querySelector(
       "#totalCorrects"
-    ).textContent = `cantidad  de respuestas  ${correctAnswers.length}`;
+    ).textContent = `total de preguntas  ${correctAnswers.length}`;
     document.querySelector(
       "#resultCorrects"
-    ).textContent = `cantidad  de respuestas coorectas ${counter}`;
+    ).textContent = `cantidad  de respuestas correctas ${counter}`;
     document.querySelector(
       "#resultIncorrects"
     ).textContent = `cantidad  de respuestas incorrectas ${
