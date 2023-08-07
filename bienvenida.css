@@ -5,8 +5,13 @@
   }
   @font-face {
     font-family: 'Japan';
-    src: url('./fonts/Vlump.ttf') format('opentype');
+    src: url('./fonts/SoulBillani.otf') format('opentype');
   }
+  @font-face {
+    font-family: 'PT Sans';
+    src: url('./fonts/PTSans-Regular.ttf') format('opentype');
+  }
+  
   /* Root CSS con la paleta de colores inspirada en Shrek */
 
   /* Ejemplo de uso de la paleta de colores en un botón */
@@ -24,12 +29,13 @@
   h1 {
     color: var(--ogre-green);
     position: absolute;
-    font-family: 'Old London';
+    font-family: 'Japan';
     font-size: 50px;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 250px;
     text-align: center;
+    letter-spacing: 3px;
   }
   .ear{
     font-family: 'Sherk';
@@ -57,10 +63,10 @@ body{
 .header-welcome{
     display: grid;
     place-items: center;
-    color: aliceblue;
 }
 
 .container-welcome {
+  font-family: 'PT Sans', sans-serif;
     position: absolute;
     top: 50%;
     width: 340px;
@@ -68,12 +74,14 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 24px;
+      /* Add some margin to create space between the main content and the footer */
+  margin-bottom: 60px;
 
   }
   
   .welcome {
     box-shadow: 2px 2px 20px #232A35;
-    background-color: #ffffff75;
+    background-color: #d0d8debd;
     width: 100%;
     border-radius: 24px;
     height: 100%;
@@ -119,4 +127,48 @@ body{
 
 .btn-custom:hover {
   background-color: #C37ED0;
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: #805a3bba;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+}
+
+.footer-left,
+.footer-right {
+  display: inline-block;
+  margin: 10px;
+}
+
+.footer-left a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-left i {
+  margin-right: 5px;
+  color: #ffffff;
+}
+
+.footer-right p {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0;
+}
+
+i.fa-heart{
+  color: var(--ogre-green);
+  font-size: 10px;
+}
+/* Estilos para el icono de corazón */
+i.fa-heart:before {
+  content: "\f004"; /* Código del icono de corazón en Font Awesome */
 }
