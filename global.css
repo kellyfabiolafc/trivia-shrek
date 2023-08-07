@@ -11,4 +11,28 @@
     --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     /* Agrega más variables según tus necesidades */
   }
-  
+  /* Styling for the general scroll appearance */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--ogre-green);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--donkey-brown);
+  border-radius: var(--border-radius);
+  border: 3px solid var(--ogre-green);
+}
+
+/* Additional styling for the hover state of scrollbar thumb */
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--fiona-purple);
+}
+
+/* Styling for scrollbar corner */
+body::-webkit-scrollbar-corner {
+  background: var(--ogre-green);
+}
+

@@ -76,6 +76,7 @@ body{
     border-radius: 24px;
       /* Add some margin to create space between the main content and the footer */
   margin-bottom: 60px;
+  justify-content: center;
 
   }
   
@@ -172,3 +173,4 @@ i.fa-heart{
 i.fa-heart:before {
   content: "\f004"; /* Código del icono de corazón en Font Awesome */
 }
+
