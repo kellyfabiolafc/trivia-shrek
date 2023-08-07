@@ -12,14 +12,14 @@ function handleWelcomePage() {
 // Función para almacenar el valor del input y redirigir a la página de trivia
 function storeValueAndRedirect(input) {
   localStorage.setItem('inputValue', input);
-  window.location.href = ".trivia.html";
+  window.location.href = "./trivia.html";
 }
 
 // Verificar en qué página estamos y ejecutar el código correspondiente
 document.addEventListener("DOMContentLoaded", function() {
   const path = window.location.pathname;
 
-  if (path.includes(".trivia.html")) {
+  if (path.includes("./trivia.html")) {
     handleTriviaPage();
   } else {
     handleWelcomePage();
