@@ -7,7 +7,7 @@ const correctAnswers = [
   "Burro",
   "Fiona",
   "Donkey",
-  "Ogrps",
+  "Ogros",
 ];
 
 function handleTriviaPage() {
