@@ -1,6 +1,6 @@
 # Shrek-Quizzy
 
-<!-- ![Shrek-Quizzy Banner](./img/banner.png) -->
+![Shrek-Quizzy Banner](./img/banner-st-md.png)
 
 Shrek-Quizzy es un divertido juego de preguntas basado en la película animada Shrek. Pon a prueba tus conocimientos sobre la película y demuestra cuánto sabes.
 
