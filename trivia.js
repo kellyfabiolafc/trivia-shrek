@@ -1,15 +1,7 @@
-
-// TODO: Función para la página de trivia
+//  Función para la página de trivia
 let counter = 0;
-
-const correctAnswers = [
-  "Shrek",
-  "Burro",
-  "Fiona",
-  "Donkey",
-  "Ogros",
-];
-
+const correctAnswers = ["Shrek", "Burro", "Fiona", "Donkey", "Ogros"];
+// let inputNoAnswers = 0;
 function handleTriviaPage() {
   // Obtener el mensaje de bienvenida y mostrar el valor del input almacenado
   const message = document.getElementById("welcome-ogre");
@@ -28,22 +20,28 @@ function handleTriviaPage() {
     message.textContent = ""; // Limpiar el contenido del mensaje
   }, 10000); // 10000 milisegundos = 10 segundos
 
-  
-document.getElementById('enviar').addEventListener('click',()=>{
-  counter = 0;
-  correctAnswers.map((question) => {
-    const inputs = document.querySelector(`input[value="${question}"]`);
-    if (inputs && inputs.checked) {
-      counter++;
-    }
+  document.getElementById("enviar").addEventListener("click", () => {
+    counter = 0;
+    //  inputNoAnswers = 0;
+    correctAnswers.map((question) => {
+      const inputs = document.querySelector(`input[value="${question}"]`);
+      if (inputs.checked) {
+        counter += 1;
+        // inputNoAnswers +=1
+      }
+    });
+    // document.querySelector('#miModal').addEventListener('shown.bs.modal', () => {
+      const totalQuestionsElement = document.querySelector("#totalQuestions");
+      const resultCorrectsElement = document.querySelector("#resultCorrects");
+      const resultIncorrectsElement = document.querySelector("#resultIncorrects");
+    
+      totalQuestionsElement.textContent = `Total de preguntas: ${correctAnswers.length}`;
+      resultCorrectsElement.textContent = `Cantidad de respuestas correctas: ${counter}`;
+      resultIncorrectsElement.textContent = `Cantidad de respuestas incorrectas: ${correctAnswers.length - counter}`;
+      document.getElementById('form-questions').reset();
+    // });
+
   });
-
-  document.querySelector("#totalCorrects").textContent = `Total de preguntas : ${correctAnswers.length}`;
-  document.querySelector( "#resultCorrects").textContent = `Cantidad  de respuestas correctas : ${counter}`;
-  document.querySelector("#resultIncorrects").textContent = `Cantidad  de respuestas incorrectas : ${ correctAnswers.length - counter}`;
-  document.getElementById("form-questions").reset();
-
-});
 
 }
 
@@ -51,13 +49,6 @@ document.getElementById('enviar').addEventListener('click',()=>{
 document.addEventListener("DOMContentLoaded", function () {
   handleTriviaPage();
 });
-
-
-
-
-
-
-
 
 // Función para obtener un saludo aleatorio y divertido
 function obtenerSaludoRandom() {
@@ -77,32 +68,3 @@ function obtenerSaludoRandom() {
   return greetings[randomIndex];
 }
 
-
-//Codigo funcional sin el modal 
-
-// document.getElementById("form-questions").addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   // Reiniciar el contador a cero en cada envío del formulario
-//   counter = 0;
-//   correctAnswers.map((question) => {
-//     const inputs = document.querySelector(`input[value="${question}"]`);
-//     if (inputs && inputs.checked) {
-//       counter++;
-//     }
-
-
-//   });
-//   document.querySelector(
-//     "#totalCorrects"
-//   ).textContent = `total de preguntas  ${correctAnswers.length}`;
-//   document.querySelector(
-//     "#resultCorrects"
-//   ).textContent = `cantidad  de respuestas correctas ${counter}`;
-//   document.querySelector(
-//     "#resultIncorrects"
-//   ).textContent = `cantidad  de respuestas incorrectas ${
-//     correctAnswers.length - counter
-//   }`;
-
-//   document.getElementById("form-questions").reset();
-// });
